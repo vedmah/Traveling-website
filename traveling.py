@@ -368,7 +368,7 @@ if page == "🏠 Home":
 
 # ══ DESTINATIONS ══════════════════════════════════════════════════════════════
 elif page == "🗺️ Destinations":
-    st.markdown('<div class="hero-section"><div class="hero-title">🗺️ Explore Destinations</div><div class="hero-sub">Discover India's most captivating places</div></div>', unsafe_allow_html=True)
+    st.markdown('<div class="hero-section"><div class="hero-title">🗺️ Explore Destinations</div><div class="hero-sub">Discover India's most captivating places</div></div> , unsafe_allow_html=True)
 
     filter_col1, filter_col2 = st.columns(2)
     with filter_col1:
