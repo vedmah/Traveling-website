@@ -280,15 +280,25 @@ def booking_interface():
 def display_stats():
     st.subheader("📊 Travel Trends 2026")
     
+    # Native Streamlit charts - NO PLOTLY needed
     months = ['Jan', 'Feb', 'Mar', 'Apr']
     north = [1200, 1500, 1800, 2200]
     south = [800, 1000, 1400, 1900]
     
-    fig = go.Figure()
-    fig.add_trace(go.Bar(name='North India', x=months, y=north))
-    fig.add_trace(go.Bar(name='South India', x=months, y=south))
-    fig.update_layout(title="Booking Trends", barmode='group')
-    st.plotly_chart(fig, use_container_width=True)
+    # Create DataFrame for bar chart
+    df = pd.DataFrame({
+        'Month': months,
+        'North India': north,
+        'South India': south
+    })
+    
+    # Native Streamlit bar chart (works everywhere)
+    st.bar_chart(df.set_index('Month'))
+    
+    # Bonus metrics
+    col1, col2 = st.columns(2)
+    with col1:
+        st.metric("🏔️ North India", "2200 bookings", "+83%")
+    with col2:
+        st.metric("🏖️ South India", "1900 bookings", "+138%")
 
-if __name__ == "__main__":
-    main()
