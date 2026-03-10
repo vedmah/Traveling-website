@@ -368,7 +368,7 @@ if page == "🏠 Home":
 
 # ══ DESTINATIONS ══════════════════════════════════════════════════════════════
 elif page == "🗺️ Destinations":
-    st.markdown('<div class="hero-section"><div class="hero-title">🗺️ Explore Destinations</div><div class="hero-sub">Discover India's most captivating places</div></div> , unsafe_allow_html=True)
+    st.markdown( <div class="hero-section"><div class="hero-title">🗺️ Explore Destinations</div><div class="hero-sub">Discover India's most captivating places</div></div> , unsafe_allow_html=True)
 
     filter_col1, filter_col2 = st.columns(2)
     with filter_col1:
@@ -406,7 +406,7 @@ elif page == "🗺️ Destinations":
 
 # ══ PACKAGES ══════════════════════════════════════════════════════════════════
 elif page == "📦 Tour Packages":
-    st.markdown('<div class="hero-section"><div class="hero-title">📦 Tour Packages</div><div class="hero-sub">Curated journeys for every kind of traveller</div></div> , unsafe_allow_html=True)
+    st.markdown( <div class="hero-section"><div class="hero-title">📦 Tour Packages</div><div class="hero-sub">Curated journeys for every kind of traveller</div></div> , unsafe_allow_html=True)
 
     type_filter = st.selectbox("Package Type", ["All", "Heritage", "Nature", "Beach", "Adventure", "Spiritual"])
     pkgs = PACKAGES if type_filter == "All" else [p for p in PACKAGES if p["type"] == type_filter]
@@ -436,7 +436,7 @@ elif page == "📦 Tour Packages":
 
 # ══ FESTIVALS ═════════════════════════════════════════════════════════════════
 elif page == "🎉 Festivals & Culture":
-    st.markdown('<div class="hero-section"><div class="hero-title">🎉 Festivals & Culture</div><div class="hero-sub">Celebrate the colours and traditions of India</div></div> , unsafe_allow_html=True)
+    st.markdown( <div class="hero-section"><div class="hero-title">🎉 Festivals & Culture</div><div class="hero-sub">Celebrate the colours and traditions of India</div></div> , unsafe_allow_html=True)
 
     st.markdown('<div class="section-heading">Major Festivals</div>', unsafe_allow_html=True)
     cols = st.columns(3)
@@ -472,7 +472,7 @@ elif page == "🎉 Festivals & Culture":
 
 # ══ FOOD ══════════════════════════════════════════════════════════════════════
 elif page == "🍽️ Food & Cuisine":
-    st.markdown('<div class="hero-section"><div class="hero-title">🍽️ Food & Cuisine</div><div class="hero-sub">A culinary journey across India's diverse flavours</div></div> , unsafe_allow_html=True)
+    st.markdown( <div class="hero-section"><div class="hero-title">🍽️ Food & Cuisine</div><div class="hero-sub">A culinary journey across India's diverse flavours</div></div> , unsafe_allow_html=True)
 
     for region, dishes in CUISINES.items():
         st.markdown(f'<div class="section-heading">{region}</div>', unsafe_allow_html=True)
@@ -505,7 +505,7 @@ elif page == "🍽️ Food & Cuisine":
 
 # ══ PLAN MY TRIP ══════════════════════════════════════════════════════════════
 elif page == "✈️ Plan My Trip":
-    st.markdown('<div class="hero-section"><div class="hero-title">✈️ Plan My Trip</div><div class="hero-sub">Tell us your preferences and we'll craft your perfect journey</div></div> , unsafe_allow_html=True)
+    st.markdown( <div class="hero-section"><div class="hero-title">✈️ Plan My Trip</div><div class="hero-sub">Tell us your preferences and we'll craft your perfect journey</div></div> , unsafe_allow_html=True)
 
     with st.form("trip_planner"):
         col1, col2 = st.columns(2)
@@ -548,7 +548,7 @@ elif page == "✈️ Plan My Trip":
 
 # ══ TIPS ══════════════════════════════════════════════════════════════════════
 elif page == "💡 Travel Tips":
-    st.markdown('<div class="hero-section"><div class="hero-title">💡 Travel Tips</div><div class="hero-sub">Expert advice for a smooth and memorable Indian adventure</div></div> , unsafe_allow_html=True)
+    st.markdown( <div class="hero-section"><div class="hero-title">💡 Travel Tips</div><div class="hero-sub">Expert advice for a smooth and memorable Indian adventure</div></div> , unsafe_allow_html=True)
 
     for tip in TIPS:
         st.markdown(f"""
