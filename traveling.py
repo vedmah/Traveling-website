@@ -301,4 +301,7 @@ def display_stats():
         st.metric("🏔️ North India", "2200 bookings", "+83%")
     with col2:
         st.metric("🏖️ South India", "1900 bookings", "+138%")
+    if __name__ == "__main__":
+    main()
+    
 
